@@ -48,7 +48,7 @@ jobs:
 
       - uses: actions/upload-artifact@v1
         with:
-          name: micro_ros_build
+          name: micro_ros_build_${{ inputs.ci_target_ref }}
           path: install
 
   micro_ros_agent:
@@ -81,7 +81,7 @@ jobs:
 
       - uses: actions/download-artifact@v1
         with:
-          name: micro_ros_build
+          name: micro_ros_build_${{ inputs.ci_target_ref }}
           path: install
 
       # Workaround https://github.com/actions/upload-artifact/issues/38
@@ -230,7 +230,7 @@ jobs:
 
       - uses: actions/download-artifact@v1
         with:
-          name: micro_ros_build
+          name: micro_ros_build_${{ inputs.ci_target_ref }}
           path: install
 
       # Workaround https://github.com/actions/upload-artifact/issues/38
