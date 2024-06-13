@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 PREFIX=$(ros2 pkg prefix micro_ros_setup)
-TARGETDIR=src
+TARGETDIR=src/iino/external/micro_ros
 
 if [ -z ${EXTERNAL_SKIP+x} ]; then
   EXTERNAL_SKIP=""
